@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "628884782382",
+    "project_id": "eat-smart-prod",
+    "storage_bucket": "eat-smart-prod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628884782382:android:80415104a615711456cebf",
+        "android_client_info": {
+          "package_name": "com.piccozone.eat_smart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628884782382-p8972oumdmi5n5qlabuu8o2vuv5f2160.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.piccozone.eat_smart",
+            "certificate_hash": "b7411925be72c8cc9c1fe23f4403e65bdfbf6327"
+          }
+        },
+        {
+          "client_id": "628884782382-denna0e75jru9mh7cjb574hbvbul78u5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0Y4aVzMWjODiSQGkJ7SN-OGQSOYCQduU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628884782382-denna0e75jru9mh7cjb574hbvbul78u5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
