@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "eat-smart-prod",
+  "private_key_id": "f694e388523601ea9f16e80cce2fdf4c08c9571a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC5r5GDj9/kA14f\ncUMot+A5NCBE114s+vBQASBc/vPhX9wIUylN6q73fTgtTITEdDOr8iVYFbCYH9HZ\nWYtEk/A0mw3yy/OCgwtNUz7wsRvDFVc3GrCXrhQ5xVIo2AOinUqjchPVQC09TUax\n+VSik4Rk+E936WpVl23KCT5d0XqRRWs5TpXUjG37/jMIehLSYcmlIE8ndXDh9cSB\nhLEVyS6cUOGF0uU31JJQydfvCD8PJ/pmnKBi5PQUV0Qb5K7x4wyd0EMxzFeVXwN7\nD2mE9KrmM7zHwofnFEwIak0xLln1qCM7NJgNi7EDSQBN9ZEPOfk6XltjRVRATkUo\nTKrBTApfAgMBAAECggEAOBaESc0nv+QUhkLcGmyQWjcYmDLFy6hw9nmgoPaSDD28\nZPdZvqNo/nDgiy5V3FGNWh7mkNjcYtcZuCGII8rb/8fmSrS4dW/H9i9zD5kv3ZmQ\noqB5PxfiHCEyVAwL7Q6+AOjwfLXJ9H5nIFND8WfF0gn/VyU2bWw0SZbJM+WWtFJT\n0VLlKmzaTH+r2KpuzyziZHLVI5FQo6qfUWNBrcS1lg3qMyUZOAk1eYfrV2IRJMx2\n16pqXQfr6MkCBLKnfjw9b/Hd+JISoicbd0Wq/inZdtEKg4TPspLaVfeo+ybfs/zF\n4U8zoK4HT5EogbSaAXw8u5gjeSZu7t9xr/e5TH+5wQKBgQDliGUvujKnKo5kV2i/\nGG+b01dTTYgMlpnDQJVc2Ves4JBzANt5DBfhbrobJijmYV+oW2wgBwWBsYjsBrbu\n7im9bHDlYfg5T8Xr8DtFQfAJyH+Fl4RIQXWNfm5aLe3lTA59lCwxF82wiSP2oAVD\n3BCzUR6Q0MprhDX6LmClUbtYSQKBgQDPGNlh/9cNM7GZt93C64FJ/mkCLsfVuGko\nJxbpqfi7KsP/ZQ9Dp0hwf5sUk1Du9lXnU/Q2ZUH5zLt6nV5sXAa/9Ol0VWOEe5RC\npwFs/jWex5jIYXHiByU5bueiR//qGVNgdzj2WbXUOrh16IggOLgDPIT2k2L1SaSE\n6zaLWxFdZwKBgQDODn5YNF3YuFmQNvAv7W30g+v3OrkSI/jx0f7EldEhv4+tzm04\n4+RkWpT0XnOFLpFDgJ82uVb2MTzsNrLvGBuck8deBW9jc/wIbWeoKyOkhLwGYBk/\nDJTNa10B1A2nNXokvmpVwDrFarhAZTOU0fCkKgS4mNe/YbdbW1sjzpXTEQKBgQCq\n5WWVkiqjUVIweGL+k5rINbHvxCzRt3DHWqJ0xfdkdGDy4zFacbO8agDOVNbHqu2u\njEANlzd/bKwU/cHKh5JmWzM+9au+yr/I1Mm/aHNVCH6SdJ8mlyDnqRZqeyG6y5Vb\nGGcgG12Jub84RV/3vvZSbWGHnI5fvZqOuQ70pnzI5wKBgQDeX0ZqZxJOspHqnREo\nAgWjwvlauKEA3Xr84D2gix0EOe2AoA4GtP8bVXv2xVs0/nn/JyMgRD6laFbXe8UD\n06FfPbbuQfWquTR7y/ESYS7ibIdLcCXPqRUXCM7vZgl3VbnNKyqtCS5Z54lQXU7m\nl5tfFOMSAdRixJcgr67HH1volQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "cloud-vision-api@eat-smart-prod.iam.gserviceaccount.com",
+  "client_id": "118049239921633131781",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cloud-vision-api%40eat-smart-prod.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

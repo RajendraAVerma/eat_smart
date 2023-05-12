@@ -79,26 +79,13 @@ class FoodBloc extends Bloc<FoodEvent, FoodState> {
             itemCount: list.length,
             itemBuilder: (context, index) {
               String label = list[index];
-              return GestureDetector(
+              return ListTile(
                 onTap: () {
                   add(FetchFoods(label));
                   Navigator.of(context, rootNavigator: true).pop();
                   context.go('/result');
                 },
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 5,
-                      horizontal: 10,
-                    ),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      color: Theme.of(context).primaryColor.withOpacity(0.2),
-                    ),
-                    child: Center(child: Text(label)),
-                  ),
-                ),
+                title: Center(child: Text(label)),
               );
             },
           ),

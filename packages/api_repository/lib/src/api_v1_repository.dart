@@ -6,7 +6,8 @@ import 'package:http/http.dart' as http;
 
 class ApiV1Repository extends ApiRepository {
   final googleCloudVision =
-      "https://us-central1-rent-rocks.cloudfunctions.net/getImageLabel";
+      // "https://us-central1-rent-rocks.cloudfunctions.net/getImageLabel";
+      "https://us-central1-eat-smart-prod.cloudfunctions.net/getImageLabel";
 
   String usdaGovEndPoint(String foodName) {
     return "https://api.nal.usda.gov/fdc/v1/foods/search?query=${foodName}&pageSize=1&api_key=MbsrjC89NMdhdbDn7Rwu5Mb6Sh1v4u5beYP8dayn";
@@ -18,8 +19,8 @@ class ApiV1Repository extends ApiRepository {
     final uri =
         Uri.parse(Uri.encodeFull('$googleCloudVision?imageLink=$imageLink'));
     final res = (await http.get(uri)).body;
+    print(res);
     final jsonParse = json.decode(res) as List;
-    print(jsonParse);
     jsonParse.forEach((element) {
       foodNameList.add(element['description'] ?? "");
     });

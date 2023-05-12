@@ -4,8 +4,10 @@ import 'package:eat_smart/app/blocs/auth/auth_bloc.dart';
 import 'package:eat_smart/app/blocs/food/food_bloc.dart';
 import 'package:eat_smart/app/home/widgets/search_food_box.dart';
 import 'package:eat_smart/app/theme/theme_manager.dart';
+import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
@@ -82,13 +84,82 @@ class _HomeScreenState extends State<HomeScreen> {
         builder: (context, state) {
           return Stack(
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  // currentIndex == 0 ? SearchFoodBox() : Container(),
-                  Placeholder(),
-                ],
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 20,
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    // currentIndex == 0 ? SearchFoodBox() : Container(),
+                    FlipCard(
+                      fill: Fill.fillBack,
+                      direction: FlipDirection.HORIZONTAL, // default
+                      front: Container(
+                        padding: EdgeInsets.symmetric(
+                          vertical: 10,
+                          horizontal: 20,
+                        ),
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.red,
+                        ),
+                        // required
+
+                        child: Column(
+                          children: [
+                            Text(
+                              'Daily Index',
+                              style: GoogleFonts.roboto(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              '40',
+                              style: GoogleFonts.roboto(
+                                fontSize: 40,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      back: Container(
+                        padding: EdgeInsets.symmetric(
+                          vertical: 10,
+                          horizontal: 20,
+                        ),
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.blue,
+                        ),
+                        // required
+                        child: Column(
+                          children: [
+                            Text(
+                              'Weekly Index',
+                              style: GoogleFonts.roboto(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              '400',
+                              style: GoogleFonts.roboto(
+                                fontSize: 40,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               if (state.isLoading)
                 BackdropFilter(
@@ -110,8 +181,10 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> getImage() async {
-    final pickedImage = await ImagePicker()
-        .pickImage(source: ImageSource.camera, imageQuality: 50);
+    final pickedImage = await ImagePicker().pickImage(
+      source: ImageSource.camera,
+      imageQuality: 30,
+    );
     if (pickedImage != null)
       context
           .read<FoodBloc>()

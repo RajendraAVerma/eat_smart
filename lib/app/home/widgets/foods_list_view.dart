@@ -9,7 +9,6 @@ class FoodListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10),
       child: BlocBuilder<FoodBloc, FoodState>(
         builder: (context, state) {
           if (state.foods.isNotEmpty) {
@@ -56,34 +55,41 @@ class _FoodCardState extends State<FoodCard> {
             borderRadius: BorderRadius.circular(20),
             color: Theme.of(context).primaryColorLight.withOpacity(0.3),
           ),
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
-              Text(widget.food['description'].toString()),
+              // Text(widget.food['description'].toString()),
               if (isSeleted)
                 Column(
                   children: [
-                    ElevatedButton(
-                      onPressed: () async {
-                        final initialQuestion =
-                            'I am eating ${widget.food['description'].toString()}. Give me only its food Nutrients? Dont explain.';
-                        await ChatGPTBox.show(context, initialQuestion);
-                      },
-                      child: const Text("Suggestion"),
-                    ),
+                    // ElevatedButton(
+                    //   onPressed: () async {
+                    //     final initialQuestion =
+                    //         'I am eating ${widget.food['description'].toString()}. Give me only its food Nutrients? Dont explain.';
+                    //     await ChatGPTBox.show(context, initialQuestion);
+                    //   },
+                    //   child: const Text("Suggestion"),
+                    // ),
                     ListView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
                       itemCount: widget.food['foodNutrients'].length as int,
                       itemBuilder: (context, index) {
                         final nutrie = widget.food['foodNutrients'][index];
-                        return Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(nutrie['nutrientName'].toString()),
-                            Text(
-                                '${nutrie['value'].toString()} ${nutrie['unitName'].toString()}'),
-                          ],
+                        return Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(nutrie['nutrientName'].toString()),
+                              Text(
+                                '${nutrie['value'].toString()} ${nutrie['unitName'].toString()}',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
                         );
                       },
                     ),
