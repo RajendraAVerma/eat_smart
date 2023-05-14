@@ -8,6 +8,8 @@ class UserEntity extends Equatable {
   final String photoURL;
   final String phoneNumber;
   final String uid;
+  final String disease;
+  final int diseaseSeverity;
   final Timestamp timestamp;
 
   UserEntity({
@@ -17,6 +19,8 @@ class UserEntity extends Equatable {
     required this.photoURL,
     required this.phoneNumber,
     required this.uid,
+    required this.disease,
+    required this.diseaseSeverity,
     required this.timestamp,
   });
 
@@ -28,6 +32,8 @@ class UserEntity extends Equatable {
       'email': email,
       'photoURL': photoURL,
       'phoneNumber': phoneNumber,
+      'disease': disease,
+      'diseaseSeverity': diseaseSeverity,
       'timestamp': timestamp,
     };
   }
@@ -40,6 +46,8 @@ class UserEntity extends Equatable {
       email: json['email'] as String,
       photoURL: json['photoURL'] as String,
       phoneNumber: json['phoneNumber'] as String,
+      disease: json['disease'] as String,
+      diseaseSeverity: json['diseaseSeverity'] as int,
       timestamp: json['timestamp'] as Timestamp,
     );
   }
@@ -52,6 +60,9 @@ class UserEntity extends Equatable {
       displayName: (snap.data() as Map<String, dynamic>)['displayName'] ?? "",
       phoneNumber: (snap.data() as Map<String, dynamic>)['phoneNumber'] ?? "",
       photoURL: (snap.data() as Map<String, dynamic>)['photoURL'] ?? "",
+      disease: (snap.data() as Map<String, dynamic>)['disease'] ?? "",
+      diseaseSeverity:
+          (snap.data() as Map<String, dynamic>)['diseaseSeverity'] ?? 0,
       timestamp: (snap.data() as Map<String, dynamic>)['timestamp'] ??
           Timestamp.fromDate(DateTime(1000)),
     );
@@ -65,6 +76,8 @@ class UserEntity extends Equatable {
       'email': email,
       'photoURL': photoURL,
       'phoneNumber': phoneNumber,
+      'disease': disease,
+      'diseaseSeverity': diseaseSeverity,
       'timestamp': timestamp,
     };
   }
@@ -77,6 +90,8 @@ class UserEntity extends Equatable {
         email,
         photoURL,
         phoneNumber,
+        disease,
+        diseaseSeverity,
         timestamp,
       ];
 }

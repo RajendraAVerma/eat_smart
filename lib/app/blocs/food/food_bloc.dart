@@ -70,6 +70,10 @@ class FoodBloc extends Bloc<FoodEvent, FoodState> {
     final list =
         await apiRepository.getLabelsFromImageLink(state.foodImageLink);
     emit(state.copyWith(foodLabelsList: list));
+    if (list.isNotEmpty) {
+      add(FetchFoods(list[0]));
+      print('fetched ??????????');
+    }
     await showModalBottomSheet(
       context: context,
       builder: (context) {

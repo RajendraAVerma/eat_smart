@@ -9,6 +9,8 @@ class User extends Equatable {
   final String photoURL;
   final String phoneNumber;
   final String uid;
+  final String disease;
+  final int diseaseSeverity;
   final Timestamp timestamp;
 
   User({
@@ -18,6 +20,8 @@ class User extends Equatable {
     required this.photoURL,
     required this.phoneNumber,
     required this.uid,
+    required this.disease,
+    required this.diseaseSeverity,
     required this.timestamp,
   });
 
@@ -28,6 +32,8 @@ class User extends Equatable {
     String? photoURL,
     String? phoneNumber,
     String? uid,
+    String? disease,
+    int? diseaseSeverity,
     Timestamp? timestamp,
   }) {
     return User(
@@ -37,6 +43,8 @@ class User extends Equatable {
       photoURL: photoURL ?? this.photoURL,
       phoneNumber: phoneNumber ?? this.phoneNumber,
       uid: uid ?? this.uid,
+      disease: disease ?? this.disease,
+      diseaseSeverity: diseaseSeverity ?? this.diseaseSeverity,
       timestamp: timestamp ?? this.timestamp,
     );
   }
@@ -49,6 +57,8 @@ class User extends Equatable {
       photoURL: photoURL,
       phoneNumber: phoneNumber,
       uid: uid,
+      disease: disease,
+      diseaseSeverity: diseaseSeverity,
       timestamp: timestamp,
     );
   }
@@ -61,6 +71,8 @@ class User extends Equatable {
       photoURL: entity.photoURL,
       phoneNumber: entity.phoneNumber,
       uid: entity.uid,
+      disease: entity.disease,
+      diseaseSeverity: entity.diseaseSeverity,
       timestamp: entity.timestamp,
     );
   }
@@ -72,6 +84,8 @@ class User extends Equatable {
     photoURL: "",
     phoneNumber: "",
     uid: "",
+    disease: "",
+    diseaseSeverity: 0,
     timestamp: Timestamp.fromDate(DateTime(1000)),
   );
 
@@ -86,6 +100,8 @@ class User extends Equatable {
         email,
         photoURL,
         phoneNumber,
+        disease,
+        diseaseSeverity,
         uid,
         timestamp,
       ];

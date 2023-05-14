@@ -16,9 +16,11 @@ class UserChanged extends UserEvent {
 }
 
 class SetUser extends UserEvent {
-  SetUser(this.userModel);
+  SetUser(this.userModel, this.disease, this.diseaseSeverity);
 
   final UserModel userModel;
+  final String disease;
+  final int diseaseSeverity;
   @override
   List<Object> get props => [userModel];
 }

@@ -58,6 +58,8 @@ class UserBloc extends Bloc<UserEvent, UserState> {
           photoURL: event.userModel.photo ?? "",
           phoneNumber: event.userModel.mobile ?? "",
           uid: event.userModel.id,
+          disease: event.disease,
+          diseaseSeverity: event.diseaseSeverity,
           timestamp: Timestamp.now(),
         ),
       );

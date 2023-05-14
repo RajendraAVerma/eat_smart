@@ -33,7 +33,7 @@ class AppRouter {
                   GoRoute(
                     path: 'result',
                     builder: (BuildContext context, GoRouterState state) {
-                      return const ResultPage();
+                      return ResultPage();
                     },
                     routes: <RouteBase>[],
                   ),
